@@ -23,7 +23,7 @@ class funcion_lineal:
         
 class funcion_polinomial(funcion_lineal):
     def __init__(self, lim_inf, lim_sup, N, b, x1, y1, x2, y2, pot):
-        super().__init__(lim_inf, lim_sup, N, b, x1, y1, x2, y2)
+        super().__init__(lim_inf, lim_sup, N, b = None, x1 = None, y1 = None, x2 = None, y2 = None)
         self.pot = pot
     def graficar(self):
         x = np.linspace(self.lim_inf, self.lim_sup, self.N)
@@ -35,16 +35,16 @@ class funcion_polinomial(funcion_lineal):
 lim_inf = -10
 lim_sup = 10
 N = 1000
-b = 3
-x1 = -2
-y1 = 3
-x2 = 2
-y2 = -1
+# b = 3
+# x1 = -2
+# y1 = 3
+# x2 = 2
+# y2 = -1
 pot = 2
 
 if __name__ == '__main__':
     # funcion1 = funcion_lineal(lim_inf, lim_sup, N, b, x1, y1, x2, y2)
     # funcion1.graficar()
     
-    funcion2 = funcion_polinomial(lim_inf, lim_sup, N, b, x1, y1, x2, y2, pot)
+    funcion2 = funcion_polinomial(lim_inf, lim_sup, N, pot)
     funcion2.graficar()
